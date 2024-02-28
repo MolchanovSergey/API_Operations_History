@@ -10,49 +10,85 @@ public class Main {
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
-        System.out.println("Hello and welcome, dear Man!\n");
-        System.out.println("Please enter transaction parameters: id, amount, date.\n");
-        System.out.println("For example: 3456723 24000,00 2024.02.24\n");
-
-
-        int[] ints = new int[5];
-        double[] doubles = new double[5];
-        LocalDate[] dates = new LocalDate[5];
+        System.out.println("Hello and welcome, dear Man!");
+//        System.out.println("Please enter transaction parameters: id, amount, date.");
+//        System.out.println("For example: 3456723 24000,00 2024.02.24");
+        Scanner scanner = new Scanner(System.in);
 
         int i = 0;
+        int[] ids = new int[10];
+//        boolean[] isFilled = new boolean[10];
+        double[] amounts = new double[10];
+        LocalDate[] dates = new LocalDate[10];
 
-        while (i < 5) {
 
-//            System.out.printf("Please enter transaction parameters: id, amount, date.\n");
-//            System.out.printf("For example: 3456723 24000,00 2024.02.24\n");
+        while (true) {
+            System.out.println("Please enter transaction parameters: id amount date");
+            System.out.println("For example: 3456723 24000,00 2024.02.24");
+            String input = scanner.nextLine();
+            if ("end".equals(input)) {
+                break;
+            }
 
-            Scanner scanner = new Scanner(System.in);
 
-            int id = scanner.nextInt();
-            double sum = scanner.nextDouble();
-            String dateString = scanner.nextLine().trim();
+            String[] parts = input.split(" ");
+            int id = Integer.parseInt(parts[0]);
+            double amount = Double.parseDouble(parts[1]);
 
             var f = DateTimeFormatter.ofPattern("yyyy.MM.dd");
-            LocalDate date = LocalDate.parse(dateString, f);
+            LocalDate date = LocalDate.parse(parts[2], f);
 
-            ints[i] = id;
-            doubles[i] = sum;
+            ids[i] = id;
+            amounts[i] = amount;
             dates[i] = date;
+//            isFilled[i] = true;
 
-//            System.out.println("You enter: " + id + " " + sum + " " + date);
             i++;
-
         }
-            System.out.println("Вы ввели транзакции:");
-            for (int j = 0; j < 5; j++) {
-                int ids = ints[j];
-                double sums = doubles[j];
-                LocalDate date_s = dates[j];
-                System.out.println(ids + " " + sums + " " + date_s);
-            }
-    }
+//        System.out.println(Arrays.toString(dates));
+//    }
 
+
+//            int id = scanner.nextInt();
+//            double sum = scanner.nextDouble();
+//            String dateString = scanner.nextLine().trim();
+//
+//            var f = DateTimeFormatter.ofPattern("yyyy.MM.dd");
+//            LocalDate date = LocalDate.parse(dateString, f);
+//
+//            ints[i] = id;
+//            doubles[i] = sum;
+//            dates[i] = date;
+//
+//
+//            i++;
+//
+//        }
+        System.out.println("Введите диапазон дат: 2022.01.01-2022.02.01");
+        String input1 = scanner.nextLine();
+        String[] parts2 = input1.split("-");
+
+        var f = DateTimeFormatter.ofPattern("yyyy.MM.dd");
+        LocalDate start_date = LocalDate.parse(parts2[0], f);
+        LocalDate finish_date = LocalDate.parse(parts2[1], f);
+
+
+        System.out.println("В выбранном промежутке времени найдены транзакции:");
+        for (int j = 0; j < ids.length; j++) {
+            if (dates[j].isAfter(start_date) && dates[j].isBefore(finish_date)) {
+
+                int idd = ids[j];
+                double sums = amounts[j];
+                LocalDate date_s = dates[j];
+                System.out.println(idd + " " + sums + " " + date_s);
+
+
+            }
+        }
+    }
 }
+//
+//}
 
 
 
