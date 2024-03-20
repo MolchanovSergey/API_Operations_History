@@ -52,9 +52,9 @@ public class Operation {
 
     @Override
     public String toString() {
-        return "Транзакция №" + id + '\'' +
-                "Сумма" + amount + '\'' +
-                "Дата:" + date + '\'' +
-                "Номер клиента" + customer + '\'';
+        return "Транзакция № " + id + '\'' +
+                "Сумма: " + amount + '\'' +
+                "Дата: " + date + '\'' +
+                "Номер клиента: " + customer + '\'';
     }
 }

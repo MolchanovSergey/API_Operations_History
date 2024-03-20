@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7624951-0804-4653-a46a-93c7a8e2d1c7" name="Changes" comment="hw 4">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/netology/molchanov/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/netology/molchanov/Operation.java" afterDir="false" />
+    <list default="true" id="e7624951-0804-4653-a46a-93c7a8e2d1c7" name="Changes" comment="hw 5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/molchanov/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/molchanov/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/molchanov/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/molchanov/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/molchanov/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/molchanov/Operation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +116,23 @@
       <option name="project" value="LOCAL" />
       <updated>1709145855745</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="hw 5">
+      <option name="closed" value="true" />
+      <created>1710795387547</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710795387547</updated>
+    </task>
+    <task id="LOCAL-00006" summary="hw 5">
+      <option name="closed" value="true" />
+      <created>1710795453139</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1710795453139</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,7 +151,8 @@
     <MESSAGE value="hw 2" />
     <MESSAGE value="hw 3" />
     <MESSAGE value="hw 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="hw 4" />
+    <MESSAGE value="hw 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="hw 5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

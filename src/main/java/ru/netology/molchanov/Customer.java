@@ -1,17 +1,35 @@
 package ru.netology.molchanov;
 
 public class Customer {
-    private String name;
     private int id;
-    private String email;
-    private String phonnum;
+    private String firstname;
+    private String secondname;
+    private String midlname;
+
+
 
     public String getName() {
-        return name;
+        return firstname;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.firstname = name;
+    }
+
+    public String getSecondname() {
+        return secondname;
+    }
+
+    public void setSecondname(String secondname) {
+        this.secondname = secondname;
+    }
+
+    public String getMidlname() {
+        return midlname;
+    }
+
+    public void setMidlname(String midlname) {
+        this.midlname = midlname;
     }
 
     public int getId() {
@@ -21,39 +39,21 @@ public class Customer {
     public void setId(int id) {
         this.id = id;
     }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPhonnum(){
-        return phonnum;
-    }
-
-    public void setPhonnum(String phonnum) {
-        if (phonnum == null || phonnum.isBlank() || phonnum.length() != 10)
-            throw new IllegalArgumentException("Некорректный номер телефона");
-        this.phonnum = phonnum;
-    }
-
-    public Customer(String name, int id, String email, String phonnum){
-        this.name = name;
+    public Customer(int id, String firstname, String secondname, String midlname){
         this.id = id;
-        this.email = email;
-        this.phonnum =phonnum;
+        this.firstname = firstname;
+        this.secondname = secondname;
+        this.midlname = midlname;
+
+
     }
 
-    public Customer(String name, int id) {
-        this.name = name;
-        this.id = id;
-    }
 
-
-    public Customer(){
-
+    @Override
+    public String toString() {
+        return "id клиента: " + id + '\'' +
+                "Имя: " + firstname + '\'' +
+                "Отчество: " + midlname + '\'' +
+                "Фамилия: " + secondname + '\'';
     }
 }
